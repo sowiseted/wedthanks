@@ -2,47 +2,38 @@
 <html>
     <head>
         <title>Wedding Photos</title>
+        <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta property="og:title" content="결혼 축하 감사합니다">
-        <!--meta property="og:description" content="결혼 잘 다녀왔습니다."-->
         <meta property="og:image" content="https://sowiseted.github.io/wedthanks/thankyoucard.jpg">
         <meta property="og:url" content="https://sowiseted.github.io/wedthanks">
         <meta property="og:type" content="website">
         <style>
-        :root {
-            --vh: 1vh;
-        }
-        body {
+        html, body {
             margin: 0;
             padding: 0;
             background-color: #f0f0f0;
+        }
+        
+        body {
             display: flex;
             justify-content: center;
             align-items: center;
             min-height: 100vh;
-            min-height: calc(var(--vh, 1vh) * 100);
         }
+        
         .photo-container {
-            position: relative;
-            max-width: 100%;
-            height: auto;
+            max-width: 996px;
+            width: 100%;
             box-sizing: border-box;
-            overflow: hidden;
         }
+        
         .photo-container img {
             width: 100%;
             height: auto;
             display: block;
-            max-width: 100%;
         }
-        .livestream-link {
-            position: absolute;
-            width: 100%;
-            cursor: pointer;
-            z-index: 10;
-            top: 87.38%;
-            height: 5.21%;
-        }
+        
         @media (max-width: 768px) {
             .photo-container {
                 padding: 0;
@@ -52,7 +43,7 @@
     </head>
     <body>
         <div class="photo-container">
-            <img src="thankyoucard.jpg" alt="Wedding Photo">
+            <img src="thankyoucard.jpg" alt="Wedding Thank You Card">
         </div>
     </body>
 </html>
