@@ -25,6 +25,55 @@
             margin-bottom: 40px;
             padding: 20px;
         }
+        .map-container {
+            background: white;
+            margin-bottom: 30px;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            text-align: center;
+        }
+        .map-container img {
+            width: 100%;
+            max-width: 400px;
+            cursor: pointer;
+            border-radius: 4px;
+            border: 2px solid #ddd;
+        }
+        .map-container p {
+            margin-top: 10px;
+            color: #666;
+            font-size: 0.9em;
+        }
+        .modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0,0,0,0.8);
+            z-index: 1000;
+            justify-content: center;
+            align-items: center;
+        }
+        .modal.active {
+            display: flex;
+        }
+        .modal img {
+            max-width: 75vw;
+            max-height: 75vh;
+            border-radius: 8px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.5);
+        }
+        .modal-close {
+            position: absolute;
+            top: 20px;
+            right: 30px;
+            color: white;
+            font-size: 40px;
+            cursor: pointer;
+        }
         .item {
             background: white;
             margin-bottom: 30px;
@@ -49,6 +98,25 @@
 </head>
 <body>
     <h1>후곡마을 16단지</h1>
+
+    <div class="map-container">
+        <img src="map.png" alt="평면도" onclick="openModal()">
+        <p>평면도 (터치하면 크게 보기)</p>
+    </div>
+
+    <div class="modal" id="mapModal" onclick="closeModal()">
+        <span class="modal-close">&times;</span>
+        <img src="map.png" alt="평면도">
+    </div>
+
+    <script>
+        function openModal() {
+            document.getElementById('mapModal').classList.add('active');
+        }
+        function closeModal() {
+            document.getElementById('mapModal').classList.remove('active');
+        }
+    </script>
 
     <div class="item">
         <img src="01.jpg" alt="사진01">
